@@ -1,13 +1,12 @@
-package pl.pja.edu.hackathon.bootstrap;
+package pl.edu.pja.hackathon.bootstrap;
 
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.context.ApplicationListener;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-import pl.pja.edu.hackathon.model.Category;
-import pl.pja.edu.hackathon.repositories.CategoryRepository;
+import pl.edu.pja.hackathon.model.Category;
+import pl.edu.pja.hackathon.repositories.CategoryRepository;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

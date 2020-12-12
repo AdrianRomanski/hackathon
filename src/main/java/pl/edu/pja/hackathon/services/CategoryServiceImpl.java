@@ -1,12 +1,12 @@
-package pl.pja.edu.hackathon.services;
+package pl.edu.pja.hackathon.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import pl.pja.edu.hackathon.model.Category;
-import pl.pja.edu.hackathon.repositories.CategoryPageRepository;
-import pl.pja.edu.hackathon.repositories.CategoryRepository;
+import pl.edu.pja.hackathon.repositories.CategoryPageRepository;
+import pl.edu.pja.hackathon.model.Category;
+import pl.edu.pja.hackathon.repositories.CategoryRepository;
 
 
 @Service

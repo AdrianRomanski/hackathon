@@ -1,4 +1,4 @@
-package pl.pja.edu.hackathon.dto;
+package pl.edu.pja.hackathon.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

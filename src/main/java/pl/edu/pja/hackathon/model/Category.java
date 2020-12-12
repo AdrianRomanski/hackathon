@@ -1,4 +1,4 @@
-package pl.pja.edu.hackathon.model;
+package pl.edu.pja.hackathon.model;
 
 
 import lombok.*;

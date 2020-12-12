@@ -1,7 +1,7 @@
-package pl.pja.edu.hackathon.model.tip;
+package pl.edu.pja.hackathon.model.tip;
 
 import lombok.*;
-import pl.pja.edu.hackathon.model.BaseEntity;
+import pl.edu.pja.hackathon.model.BaseEntity;
 
 
 import javax.persistence.Entity;
