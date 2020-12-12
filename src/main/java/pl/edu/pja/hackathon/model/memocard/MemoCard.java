@@ -20,12 +20,12 @@ public class MemoCard extends BaseEntity {
 	private String definition;
 	@ManyToOne
 	private Category category;
-//	@OneToOne
-//	private Statistics statistics;
+	@OneToOne
+	private Statistics statistics;
+	private DifficultyEnum difficultyEnum;
 	private Boolean ignored;
 	private Boolean starred;
 
 	@Lob
 	private Byte[] image;
-
 }
