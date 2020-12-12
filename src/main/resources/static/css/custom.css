@@ -10,7 +10,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.42857;
-    min-height: 2150px;
+    min-height: 1300px;
     max-height: max-content;
 }
 
@@ -50,7 +50,7 @@ img {
     border-radius: 9px;
     box-shadow: 0 1px #f1f3f0;
     cursor: pointer;
-    height: 675px;
+    height: 535px;
     margin-bottom: 50px;
     padding: 0;
 }
