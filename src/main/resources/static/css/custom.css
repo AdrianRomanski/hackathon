@@ -1,0 +1,193 @@
+
+
+body {
+    background-size: auto;
+    background-image: linear-gradient(to bottom,
+    #141E30, #2980b9);
+    background-repeat: no-repeat;
+    color: lightslategrey;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.42857;
+    min-height: 2150px;
+    max-height: max-content;
+}
+
+
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+.view-directory .movies-listing {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img {
+    border: 0 none;
+}
+
+/*********************************************************************************************************************/
+
+/*LISTING*/
+.listing {
+    background-color: #f7f7f7;
+    border: 1px solid #f1f3f0;
+    border-radius: 9px;
+    box-shadow: 0 1px #f1f3f0;
+    cursor: pointer;
+    height: 675px;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.listing-actor {
+    height: 550px;
+}
+
+.listing-home {
+    height: 175px;
+    background-color: lavender;
+    margin-top: 10px;
+}
+
+/*Listing Single*/
+.listing-single {
+    border: 2px solid #f1f3f0;
+    height: 450px;
+}
+
+.listing-single-info {
+    border: 2px solid #f1f3f0;
+    min-height: 450px;
+    max-height: max-content;
+    margin-bottom: 10px;
+}
+
+.single-info-buttons {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.single-info-secondary {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.listing .listing-extra {
+    display: flex;
+    margin-top: auto;
+    color: #4169E1 !important;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+    justify-content: space-around;
+}
+
+.listing .listing-extra-item {
+    margin-top: auto;
+    color: #4169E1 !important;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.listing .box-image-container {
+    overflow: hidden;
+    display: block;
+    background-size: cover;
+}
+
+.listing .box-image-container .box-image {
+    border-bottom: 1px solid #ededed;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+}
+
+.listing .listing-title {
+    color: #4169E1;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    max-height: 70px;
+    overflow: hidden;
+    padding: 16px 16px 4px;
+}
+
+/*Descriptions*/
+.listing .listing-description {
+    color: #586f6f;
+    font-size: 14px;
+    font-weight: 200;
+    max-height: 100px;
+    overflow: hidden;
+    padding: 5px 15px;
+}
+
+.single-info-description {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    line-height: 40px;
+    min-height: 165px;
+    overflow: hidden;
+}
+
+.listing-description-home {
+    font-size: 25px;
+    color: #586f6f;
+}
+
+.listing .listing-extra-info .price {
+    color: #4169E1 !important;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 34px;
+    margin-right: 70px;
+    margin-top: -18px;
+    text-align: right;
+}
+
+.listing .listing-extra-info .author-name {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 30px;
+    max-height: 30px;
+    margin-top: 4px;
+    margin-right: 40px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
