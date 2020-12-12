@@ -7,4 +7,6 @@ import java.util.List;
 public interface UserService {
 
     List<User> getTop20Users();
+
+    User getUserByID(Long id);
 }

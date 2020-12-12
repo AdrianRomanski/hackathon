@@ -6,10 +6,12 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import pl.edu.pja.hackathon.model.Category;
+import pl.edu.pja.hackathon.model.User;
 import pl.edu.pja.hackathon.model.memocard.DifficultyEnum;
 import pl.edu.pja.hackathon.model.memocard.MemoCard;
 import pl.edu.pja.hackathon.repositories.CategoryRepository;
 import pl.edu.pja.hackathon.repositories.MemoCardRepository;
+import pl.edu.pja.hackathon.repositories.UserRepository;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -25,6 +27,7 @@ public class ApplicationBootstrap implements ApplicationListener<ContextRefreshe
 
     private final CategoryRepository categoryRepository;
     private final MemoCardRepository memoCardRepository;
+    private final UserRepository userRepository;
 
     @Override
     @SneakyThrows
@@ -318,6 +321,11 @@ public class ApplicationBootstrap implements ApplicationListener<ContextRefreshe
         memoCardRepository.saveAll(drinksMemoCards);
         drinks.setMemoCardList(drinksMemoCards);
         categoryRepository.save(drinks);
+
+        Byte[] userImage = getBytes("src/main/resources/static/pictures/student.jpg");
+
+        User user = User.builder().firstName("Tester").image(userImage).points(0).build();
+        userRepository.save(user);
     }
 
     private Byte[] getBytes(String path) throws IOException {

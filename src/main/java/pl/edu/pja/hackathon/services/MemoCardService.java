@@ -16,4 +16,6 @@ public interface MemoCardService {
     MemoCard getMemoCardById(Long id);
 
     Set<String> getRandomAnswers(Long id);
+
+    boolean checkAnswer(String answer, Long id);
 }

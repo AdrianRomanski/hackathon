@@ -49,19 +49,25 @@
 <div class="container-fluid col-md-12 mx-4" style="margin-top: 250px">
 
     <div class="row" style="margin-bottom: 125px">
+
+
+<!--        &lt;!&ndash; ELSE &ndash;&gt;-->
+<!--        <div th:unless="${customer.anonymous}">-->
+<!--            <div th:text=" 'Hi,' + ${customer.name}">Hi, User</div>-->
+<!--        </div>-->
+
         <div class="col-md-3">
             <div class="listing listing-single">
                 <div class="row">
                     <div class="listing">
                         <div class="row">
-                            <a th:href="@{'/memocards/' + ${card.category.name} +'/page/1'}">
+                            <a href="#">
                                 <div class="col-lg-12">
                                     <div class="box-image-container">
                                         <img role="presentation"
-                                             th:src="@{'/category/' + ${card.category.id} + '/categoryImage'}"
+                                             th:src="@{'/user/1/userImage'}"
                                              class="box-image">
                                     </div>
-                                    <div class="listing-title category-info" th:text="${card.category.name.toUpperCase()}"></div>
                                 </div>
                             </a>
                         </div>
@@ -80,7 +86,7 @@
                             <td class="category-name">Points</td>
                         </tr>
                         <tr>
-                            <td class="category-info">Easy</td>
+                            <td class="category-info" th:text="${card.difficultyEnum.toString()}"></td>
                             <td class="category-info">150</td>
                             <td class="category-info" th:text="${card.category.name}"></td>
                             <td class="category-info">5</td>
@@ -92,14 +98,25 @@
                          th:text="${card.name.toUpperCase()}">
                     </div>
                     <div class="col-12 d-flex flex-column" th:each="answer: ${answers}">
-                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button" th:text="${answer}">Black</a>
+                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button" th:text="${answer}" th:href="@{'/memocards/' + ${card.id} +'/' + ${answer}}">Black</a>
 <!--                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button">Blue</a>-->
 <!--                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button">Violet</a>-->
 <!--                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button">Pink</a>-->
                     </div>
                 </div>
-
-
+            </div>
+        </div>
+        <div th:if="${card.correctAnswer == true}" class="row">
+            <div class="col-12">
+                <div class="col-12">
+                    <div class="panel-body">
+                        <div class="panel-primary">
+                            <div class="text-success" style="font-size: 125px"
+                                 th:text="${card.definition}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

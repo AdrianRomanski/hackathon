@@ -3,6 +3,7 @@ package pl.edu.pja.hackathon.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import java.time.LocalDate;
 
 @Entity
@@ -18,6 +19,13 @@ public class User extends BaseEntity{
     private String country;
     private LocalDate dateOfBirth;
 
-    private Double points;
+    private int points;
+
+    @Lob
+    private Byte[] image;
+
+    public void incrementPoints() {
+        this.points+=5;
+    }
 
 }

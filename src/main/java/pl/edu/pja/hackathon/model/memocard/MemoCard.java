@@ -25,6 +25,7 @@ public class MemoCard extends BaseEntity {
 	private DifficultyEnum difficultyEnum;
 	private Boolean ignored;
 	private Boolean starred;
+	private Boolean correctAnswer;
 
 	@Lob
 	private Byte[] image;
