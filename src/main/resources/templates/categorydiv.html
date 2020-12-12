@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CategoryDiv</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
+
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+
+
+</head>
+<body>
+<div class="col-md-3" th:fragment="categorydiv">
+    <div class="listing">
+        <div class="row">
+            <a th:href="@{'/categories/' + ${category.name} +'/page/1'}">
+                <div class="col-lg-12">
+                    <div class="box-image-container">
+                        <img role="presentation"
+                             th:src="@{'/category/' + ${category.id} + '/categoryImage'}"
+                             class="box-image">
+                    </div>
+                    <div class="listing-title" th:text="${category.name}"></div>
+                    <div class="listing-description" th:text="${category.description}"></div>
+                </div>
+            </a>
+        </div>
+        <div class="listing-extra col-md-4">
+            <div class="small price">
+                Movies
+            </div>
+            <div class="listing-extra col-md-4">
+                <div class="small price">Number of Courses</div>
+            </div>
+<!--            th:text="${category.courses.size()}"-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

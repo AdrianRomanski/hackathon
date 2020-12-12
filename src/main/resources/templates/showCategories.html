@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>en"/>
+
+    <title>Categories</title>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="section-header">Categories</h1>
+    </div>
+</div>
+
+<div class="container col-md-10 col-md-offset-1 section" style="margin-top: 25px">
+    <div class="row">
+        <div class="row">
+            <div th:each="category: ${categories}">
+                <div th:replace="categorydiv :: categorydiv">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" th:fragment="pagination">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <nav aria-label="Pagination">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
+                    <a class="page-link" th:href="@{|/movies/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript" th:src="@{/static/jquery.js}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script type="text/javascript" th:src="@{/js/custom.js}"></script>
+</body>
+</html>
