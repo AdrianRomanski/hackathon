@@ -11,4 +11,5 @@ public interface MemoCardPageRepository extends CrudRepository<MemoCard, Long> {
 
     Page<MemoCard> findAll(Pageable pageable);
 
+
 }
