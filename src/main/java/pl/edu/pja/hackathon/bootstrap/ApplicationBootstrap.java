@@ -49,19 +49,19 @@ public class ApplicationBootstrap implements ApplicationListener<ContextRefreshe
         Byte[] buildingsImage = getBytes("src/main/resources/static/pictures/buildings.jpg");
 
         // Categories
-        Category colors = Category.builder().name("Kolory").image(colorsImage).build();
-        Category countries = Category.builder().name("Państwa").image(countriesImage).build();
-        Category furniture = Category.builder().name("Meble").image(furnitureImage).build();
-        Category animals = Category.builder().name("Zwierzęta").image(animalsImage).build();
-        Category family = Category.builder().name("Rodzina").image(familyImage).build();
-        Category buildings = Category.builder().name("Budynki").image(buildingsImage).build();
-        Category food = Category.builder().name("Jedzenie").image(foodImage).build();
-        Category vehicles = Category.builder().name("Pojazdy").image(vehicleImage).build();
-        Category items = Category.builder().name("Przedmioty").image(itemsImage).build();
-        Category cities = Category.builder().name("Miasta").image(citiesImage).build();
-        Category weather = Category.builder().name("Pogoda").image(weatherImage).build();
-        Category work = Category.builder().name("Praca").image(workImage).build();
-        Category drinks = Category.builder().name("Napoje").image(drinksImage).build();
+        Category colors = Category.builder().name("Colors").image(colorsImage).build();
+        Category countries = Category.builder().name("Countries").image(countriesImage).build();
+        Category furniture = Category.builder().name("Furniture").image(furnitureImage).build();
+        Category animals = Category.builder().name("Animals").image(animalsImage).build();
+        Category family = Category.builder().name("Family").image(familyImage).build();
+        Category buildings = Category.builder().name("Buildings").image(buildingsImage).build();
+        Category food = Category.builder().name("Food").image(foodImage).build();
+        Category vehicles = Category.builder().name("Vehicles").image(vehicleImage).build();
+        Category items = Category.builder().name("Items").image(itemsImage).build();
+        Category cities = Category.builder().name("Cities").image(citiesImage).build();
+        Category weather = Category.builder().name("Weather").image(weatherImage).build();
+        Category work = Category.builder().name("Work").image(workImage).build();
+        Category drinks = Category.builder().name("Drinks").image(drinksImage).build();
 
         categoryRepository.saveAll(Arrays.asList(colors, countries, furniture, animals, family, buildings, food, vehicles, items, cities, weather, work, drinks));
 
