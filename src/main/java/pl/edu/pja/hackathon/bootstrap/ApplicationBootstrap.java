@@ -6,7 +6,9 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import pl.edu.pja.hackathon.model.Category;
+import pl.edu.pja.hackathon.model.memocard.MemoCard;
 import pl.edu.pja.hackathon.repositories.CategoryRepository;
+import pl.edu.pja.hackathon.repositories.MemoCardRepository;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -14,12 +16,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Set;
 
 @Component
 @AllArgsConstructor
 public class ApplicationBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     private final CategoryRepository categoryRepository;
+    private final MemoCardRepository memoCardRepository;
 
     @Override
     @SneakyThrows
@@ -27,15 +31,25 @@ public class ApplicationBootstrap implements ApplicationListener<ContextRefreshe
 
         Byte[] horrorImage = getBytes("src/main/resources/static/pictures/kiwi_oil.jpg");
 
-        Category category = Category.builder().name("kredki").image(horrorImage).build();
-        Category category1 = Category.builder().name("kredki").image(horrorImage).build();
-        Category category2 = Category.builder().name("kredki").image(horrorImage).build();
-        Category category3 = Category.builder().name("kredki").image(horrorImage).build();
-        Category category4 = Category.builder().name("kredki").image(horrorImage).build();
-        Category category5 = Category.builder().name("kredki").image(horrorImage).build();
+        Category colors = Category.builder().name("kolory").image(horrorImage).build();
+        Category countries = Category.builder().name("nazwy państw").image(horrorImage).build();
+        Category furnitures = Category.builder().name("meble").image(horrorImage).build();
+        Category animals = Category.builder().name("zwierzęta").image(horrorImage).build();
+        Category family = Category.builder().name("rodzina").image(horrorImage).build();
+        Category fruits = Category.builder().name("owoce").image(horrorImage).build();
+        Category vegetables = Category.builder().name("warzywa").image(horrorImage).build();
+        Category vehicles = Category.builder().name("pojazdy").image(horrorImage).build();
 
+        categoryRepository.saveAll(Arrays.asList(colors, countries, furnitures, animals, family, fruits, vegetables, vehicles));
 
-        categoryRepository.saveAll(Arrays.asList(category, category1, category2, category3, category4, category5));
+        MemoCard black = MemoCard.builder().name("black").definition("czarny").category(colors).build();
+        MemoCard white = MemoCard.builder().name("white").definition("biały").category(colors).build();
+        MemoCard orange = MemoCard.builder().name("orange").definition("pomarańczowy").category(colors).build();
+        MemoCard red = MemoCard.builder().name("red").definition("czerwony").category(colors).build();
+        MemoCard blue = MemoCard.builder().name("blue").definition("niebieski").category(colors).build();
+        MemoCard grey = MemoCard.builder().name("grey").definition("szary").category(colors).build();
+
+        memoCardRepository.saveAll(Arrays.asList(black, white, orange, red, blue, grey));
     }
 
     private Byte[] getBytes(String path) throws IOException {
