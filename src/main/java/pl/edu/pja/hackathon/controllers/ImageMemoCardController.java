@@ -1,16 +1,10 @@
-package pl.pja.edu.hackathon.controllers;
-
+package pl.edu.pja.hackathon.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
-import pl.pja.edu.hackathon.services.CategoryService;
-
+import pl.edu.pja.hackathon.services.MemoCardService;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
@@ -19,22 +13,20 @@ import java.io.InputStream;
 
 import static com.google.common.io.ByteStreams.copy;
 
-
 @Controller
 @AllArgsConstructor
-public class ImageCategoryController {
+public class ImageMemoCardController {
 
-    private final CategoryService categoryService;
+    private final MemoCardService memoCardService;
 
-
-    @GetMapping("category/{id}/categoryImage")
+    @GetMapping("memocard/{id}/memoCardImage")
     public void renderImageFromDB(@PathVariable String id, HttpServletResponse response) throws IOException {
-        var category = categoryService.getCategoryById(Long.valueOf(id));
-        if (category.getImage() != null) {
-            byte[] byteArray = new byte[category.getImage().length];
+        var memoCard = memoCardService.getMemoCardById(Long.valueOf(id));
+        if (memoCard.getImage() != null) {
+            byte[] byteArray = new byte[memoCard.getImage().length];
             int i = 0;
 
-            for (Byte wrappedByte : category.getImage()) {
+            for (Byte wrappedByte : memoCard.getImage()) {
                 byteArray[i++] = wrappedByte; //auto unboxing
             }
             response.setContentType("image/jpeg");

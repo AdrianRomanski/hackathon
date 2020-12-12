@@ -1,4 +1,4 @@
-package pl.pja.edu.hackathon.model.memocard;
+package pl.edu.pja.hackathon.model.memocard;
 
 import lombok.AllArgsConstructor;
 

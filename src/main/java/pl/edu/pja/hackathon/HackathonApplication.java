@@ -1,4 +1,4 @@
-package pl.pja.edu.hackathon;
+package pl.edu.pja.hackathon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

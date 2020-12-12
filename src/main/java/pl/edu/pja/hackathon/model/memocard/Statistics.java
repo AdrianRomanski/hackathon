@@ -1,7 +1,7 @@
-package pl.pja.edu.hackathon.model.memocard;
+package pl.edu.pja.hackathon.model.memocard;
 
 import lombok.*;
-import pl.pja.edu.hackathon.model.BaseEntity;
+import pl.edu.pja.hackathon.model.BaseEntity;
 
 
 import javax.persistence.Entity;
