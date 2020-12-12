@@ -30,21 +30,34 @@ public class ApplicationBootstrap implements ApplicationListener<ContextRefreshe
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
 
         Byte[] horrorImage = getBytes("src/main/resources/static/pictures/kiwi_oil.jpg");
+        Byte[] colorsImage = getBytes("src/main/resources/static/pictures/colors.jpg");
+        Byte[] furnitureImage = getBytes("src/main/resources/static/pictures/furniture.jpg");
+        Byte[] animalsImage = getBytes("src/main/resources/static/pictures/animals.jpg");
+        Byte[] familyImage = getBytes("src/main/resources/static/pictures/family.jpg");
+        Byte[] foodImage = getBytes("src/main/resources/static/pictures/food.jpg");
+        Byte[] vehicleImage = getBytes("src/main/resources/static/pictures/vehicle.jpg");
+        Byte[] itemsImage = getBytes("src/main/resources/static/pictures/items.jpg");
+        Byte[] citiesImage = getBytes("src/main/resources/static/pictures/cities.jpg");
+        Byte[] weatherImage = getBytes("src/main/resources/static/pictures/weather.jpg");
+        Byte[] workImage = getBytes("src/main/resources/static/pictures/work.jpg");
+        Byte[] drinksImage = getBytes("src/main/resources/static/pictures/drinks.jpg");
+        Byte[] countriesImage = getBytes("src/main/resources/static/pictures/countries.jpg");
+        Byte[] buildingsImage = getBytes("src/main/resources/static/pictures/buildings.jpg");
 
         // Categories
-        Category colors = Category.builder().name("Kolory").image(horrorImage).build();
-        Category countries = Category.builder().name("Państwa").image(horrorImage).build();
-        Category furniture = Category.builder().name("Meble").image(horrorImage).build();
-        Category animals = Category.builder().name("Zwierzęta").image(horrorImage).build();
-        Category family = Category.builder().name("Rodzina").image(horrorImage).build();
-        Category buildings = Category.builder().name("Budynki").image(horrorImage).build();
-        Category food = Category.builder().name("Jedzenie").image(horrorImage).build();
-        Category vehicles = Category.builder().name("Pojazdy").image(horrorImage).build();
-        Category items = Category.builder().name("Przedmioty").image(horrorImage).build();
-        Category cities = Category.builder().name("Miasta").image(horrorImage).build();
-        Category weather = Category.builder().name("Pogoda").image(horrorImage).build();
-        Category work = Category.builder().name("Praca").image(horrorImage).build();
-        Category drinks = Category.builder().name("Napoje").image(horrorImage).build();
+        Category colors = Category.builder().name("Kolory").image(colorsImage).build();
+        Category countries = Category.builder().name("Państwa").image(countriesImage).build();
+        Category furniture = Category.builder().name("Meble").image(furnitureImage).build();
+        Category animals = Category.builder().name("Zwierzęta").image(animalsImage).build();
+        Category family = Category.builder().name("Rodzina").image(familyImage).build();
+        Category buildings = Category.builder().name("Budynki").image(buildingsImage).build();
+        Category food = Category.builder().name("Jedzenie").image(foodImage).build();
+        Category vehicles = Category.builder().name("Pojazdy").image(vehicleImage).build();
+        Category items = Category.builder().name("Przedmioty").image(itemsImage).build();
+        Category cities = Category.builder().name("Miasta").image(citiesImage).build();
+        Category weather = Category.builder().name("Pogoda").image(weatherImage).build();
+        Category work = Category.builder().name("Praca").image(workImage).build();
+        Category drinks = Category.builder().name("Napoje").image(drinksImage).build();
 
         categoryRepository.saveAll(Arrays.asList(colors, countries, furniture, animals, family, buildings, food, vehicles, items, cities, weather, work, drinks));
 
