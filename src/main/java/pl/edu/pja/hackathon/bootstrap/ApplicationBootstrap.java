@@ -16,7 +16,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Set;
+import java.util.List;
 
 @Component
 @AllArgsConstructor
@@ -31,17 +31,24 @@ public class ApplicationBootstrap implements ApplicationListener<ContextRefreshe
 
         Byte[] horrorImage = getBytes("src/main/resources/static/pictures/kiwi_oil.jpg");
 
-        Category colors = Category.builder().name("kolory").image(horrorImage).build();
-        Category countries = Category.builder().name("nazwy państw").image(horrorImage).build();
-        Category furnitures = Category.builder().name("meble").image(horrorImage).build();
-        Category animals = Category.builder().name("zwierzęta").image(horrorImage).build();
-        Category family = Category.builder().name("rodzina").image(horrorImage).build();
-        Category fruits = Category.builder().name("owoce").image(horrorImage).build();
-        Category vegetables = Category.builder().name("warzywa").image(horrorImage).build();
-        Category vehicles = Category.builder().name("pojazdy").image(horrorImage).build();
+        // Categories
+        Category colors = Category.builder().name("Kolory").image(horrorImage).build();
+        Category countries = Category.builder().name("Państwa").image(horrorImage).build();
+        Category furniture = Category.builder().name("Meble").image(horrorImage).build();
+        Category animals = Category.builder().name("Zwierzęta").image(horrorImage).build();
+        Category family = Category.builder().name("Rodzina").image(horrorImage).build();
+        Category buildings = Category.builder().name("Budynki").image(horrorImage).build();
+        Category food = Category.builder().name("Jedzenie").image(horrorImage).build();
+        Category vehicles = Category.builder().name("Pojazdy").image(horrorImage).build();
+        Category items = Category.builder().name("Przedmioty").image(horrorImage).build();
+        Category cities = Category.builder().name("Miasta").image(horrorImage).build();
+        Category weather = Category.builder().name("Pogoda").image(horrorImage).build();
+        Category work = Category.builder().name("Praca").image(horrorImage).build();
+        Category drinks = Category.builder().name("Napoje").image(horrorImage).build();
 
-        categoryRepository.saveAll(Arrays.asList(colors, countries, furnitures, animals, family, fruits, vegetables, vehicles));
+        categoryRepository.saveAll(Arrays.asList(colors, countries, furniture, animals, family, buildings, food, vehicles, items, cities, weather, work, drinks));
 
+        // Colors
         MemoCard black = MemoCard.builder().name("black").definition("czarny").category(colors).build();
         MemoCard white = MemoCard.builder().name("white").definition("biały").category(colors).build();
         MemoCard orange = MemoCard.builder().name("orange").definition("pomarańczowy").category(colors).build();
