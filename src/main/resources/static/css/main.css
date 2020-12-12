@@ -6,7 +6,7 @@ body {
 /*header*/
 .header-home {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .5)), url("pictures/home.webp") no-repeat center center
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .5)), url("../pictures/home.webp") no-repeat center center
     /cover;
 }
 /*end of header*/
@@ -137,7 +137,7 @@ li > a:hover:after{
 }
 
 .underline {
-    width: 250px;
+    width: 450px;
     border: 2px solid lightslategray;
     margin: auto;
 }
@@ -153,6 +153,40 @@ li > a:hover:after{
 .mission-text {
     color: lightslategray;
 }
+
+
+.fromLeft {
+    animation-name: fromLeft;
+    animation-duration: 3s;
+}
+
+.fromRight {
+    animation-name: fromRight;
+    animation-duration: 5s;
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-360px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fromRight {
+    0% {
+        transform: translateX(90px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 /*end of mission*/
 
 /*subscribe*/
@@ -162,7 +196,7 @@ li > a:hover:after{
     rgba(21,31, 31, .6) 0%,
     rgba(21, 31, 32, .8) 50%,
     transparent 50%),
-    url("pictures/kiwi_oil.jpg") no-repeat center center /cover;
+    url("../pictures/kiwi_oil.jpg") no-repeat center center /cover;
 }
 
 .input {
