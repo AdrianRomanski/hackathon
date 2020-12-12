@@ -2,15 +2,15 @@
 
 body {
     background-size: auto;
-    background-image: linear-gradient(to bottom,
-    #141E30, #2980b9);
+    background-image: linear-gradient(to bottom, lightslategrey, white);
+    /*#141E30, #2980b9);*/
     background-repeat: no-repeat;
     color: lightslategrey;
     text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    /*font-size: 12px;*/
     line-height: 1.42857;
-    min-height: 2150px;
+    min-height: 1800px;
     max-height: max-content;
 }
 
@@ -50,45 +50,11 @@ img {
     border-radius: 9px;
     box-shadow: 0 1px #f1f3f0;
     cursor: pointer;
-    height: 675px;
+    height: 535px;
     margin-bottom: 50px;
     padding: 0;
 }
 
-.listing-actor {
-    height: 550px;
-}
-
-.listing-home {
-    height: 175px;
-    background-color: lavender;
-    margin-top: 10px;
-}
-
-/*Listing Single*/
-.listing-single {
-    border: 2px solid #f1f3f0;
-    height: 450px;
-}
-
-.listing-single-info {
-    border: 2px solid #f1f3f0;
-    min-height: 450px;
-    max-height: max-content;
-    margin-bottom: 10px;
-}
-
-.single-info-buttons {
-    margin-top: auto;
-    display: flex;
-    justify-content: space-around;
-}
-
-.single-info-secondary {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
 
 .listing .listing-extra {
     display: flex;
@@ -155,31 +121,8 @@ img {
     overflow: hidden;
 }
 
-.listing-description-home {
-    font-size: 25px;
-    color: #586f6f;
-}
 
-.listing .listing-extra-info .price {
-    color: #4169E1 !important;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 34px;
-    margin-right: 70px;
-    margin-top: -18px;
-    text-align: right;
-}
 
-.listing .listing-extra-info .author-name {
-    font-size: 15px;
-    font-weight: 200;
-    line-height: 30px;
-    max-height: 30px;
-    margin-top: 4px;
-    margin-right: 40px;
-    margin-bottom: 5px;
-    text-align: right;
-}
 
 
 
