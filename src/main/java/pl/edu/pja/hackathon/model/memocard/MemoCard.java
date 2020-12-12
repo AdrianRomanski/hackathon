@@ -1,7 +1,6 @@
 package pl.edu.pja.hackathon.model.memocard;
 
 import lombok.*;
-import org.jetbrains.annotations.NotNull;
 import pl.edu.pja.hackathon.model.BaseEntity;
 import pl.edu.pja.hackathon.model.tip.Tip;
 
@@ -13,7 +12,6 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@NotNull
 public class MemoCard extends BaseEntity {
 
 	private String name;

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" th:href="@{/pictures/logo.png}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--    fontawesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <title>Hackathon</title>
+    <link th:href="@{/main.css}" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+
+<header class="header-home">
+    <!--navigation-->
+    <nav class="navbar navbar-expand-md navbar-dark nav-menu fixed-top">
+        <a class="navbar-brand" href="#">
+            <img th:src="@{/pictures/logo.png}" height="50" alt="mdb logo">
+        </a>
+        <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <div class="bg-light line1"></div>
+            <div class="bg-light line2"></div>
+            <div class="bg-light line3"></div>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" th:href="@{/home}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/products}">Categories<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/creator}">Rankings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--end of navigation-->
+
+    <!-- banner -->
+    <div class="text-light text-center banner col-lg-6">
+        <h1 class="display-6 banner-heading text-uppercase">Learning Cards <span class="lead text-uppercase">World</span></h1>
+        <p class="lead banner-par text-uppercase underline_anim" style="color: yellowgreen">easy knowledge starts here.</p>
+    </div>
+    <!-- end of banner -->
+
+</header>
+<!--end of header-->
+
+
+<!--some white section-->
+
+<!--mission section-->
+
+<section class="p-5 mission">
+
+    <!--title-->
+    <div class="row text-white text-center">
+        <div class="col m-4">
+            <h1 class="display-4 mb-4 mission-name">Our Mission</h1>
+            <div class="underline mb-4"></div>
+            <p class="lead" style="color: grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum nibh nulla, ac aliquet magna lobortis ut. Praesent mi sapien.</p>
+        </div>
+    </div>
+    <!--end of title-->
+    <div class="row my-5">
+        <div class="col-md-4 text-center mb-sm-8">
+            <i class="fas fa-diagnoses fa-5x mb-4 mb-sm-12 icon-color"></i>
+            <h1 class="mission-name mb-3">Innovation</h1>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum nibh nulla, ac aliquet magna lobortis ut. Praesent mi sapien.</p>
+        </div>
+        <div class="col-md-4 text-center mb-sm-8">
+            <i class="fas fa-gem fa-5x  mb-4  icon-color"></i>
+            <h1 class="mission-name mb-3">Quality</h1>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum nibh nulla, ac aliquet magna lobortis ut. Praesent mi sapien.</p>
+        </div>
+        <div class="col-md-4 text-center mb-sm-8">
+            <i class="fas fa-leaf fa-5x  mb-4 icon-color"></i>
+            <h1 class="mission-name mb-3">Speed</h1>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum nibh nulla, ac aliquet magna lobortis ut. Praesent mi sapien.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 text-center">
+                <img th:src="@{/pictures/tablet.png}" width="350" class="img-fluid camera-img">
+            </div>
+            <div class="col-lg-7  text-lg-right text-center mission-text">
+                <h1 class="display-5">Faster than books</h1>
+                <p class="lead" style="color: lightslategrey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum nibh nulla, ac aliquet magna lobortis ut. Praesent mi sapien.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--end of mission-->
+
+<!--newsletter-->
+<section class="subscribe p-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 pb-4">
+                <h3 class="display-4 mb-5 text-white text-center">Get In Touch</h3>
+                <form class="contact-form">
+                    <div class="form-group py-4">
+                        <input type="text" class="form-control my-2 p-2 input" placeholder="Name">
+                        <label for="name" class="label">Name</label>
+                    </div>
+                    <div class="form-group py-4">
+                        <input type="email" class="form-control my-2 p-2 input" placeholder="Email Address">
+                        <label for="email" class="label">Email Address</label>
+                    </div>
+                    <button type="submit" class="btn btn-block p-2 font-weight-bold text-uppercase submit-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--newsletter--->
+
+<!--footer-->
+
+<footer class="bg-dark px-5">
+
+    <div class="container-fluid">
+        <div class="row text-light py-4">
+
+            <div class="col-6 text-left">
+                <h5 class="pb-3">Visit us</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="footer-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Categories</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Rankings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 text-right">
+                <h5 class="pb-3">Need Help?</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="footer-link text-uppercase">Customer Service</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link text-uppercase">Online Chat</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link text-uppercase">Support</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-facebook-square fa-2x text-primary"></i>
+                        <i class="fab fa-instagram fa-2x text-danger"></i>
+                        <i class="fab fa-twitter fa-2x text-info"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col text-center text-light border-top pt-3">
+            <p>&copy; 2020 by Twitching Nether Copyright, All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+<!--end of footer-->
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript" th:src="@{/static/jquery.js}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
