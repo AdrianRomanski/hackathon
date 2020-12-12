@@ -8,5 +8,7 @@ public interface MemoCardService {
 
     Page<MemoCard> getAllMemoCardsPaged(Pageable pageable);
 
+    Page<MemoCard> getAllForCategory(String name, Pageable pageable);
+
     MemoCard getMemoCardById(Long id);
 }

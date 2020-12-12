@@ -20,12 +20,23 @@ public class MemoCardController {
 
     private final MemoCardService memoCardService;
 
-    @GetMapping("/memocards/page/{page}")
+    @GetMapping("/memocards/showAll/page/{page}")
     public ModelAndView getAllMemoCardsPaged(@PathVariable int page) {
         ModelAndView modelAndView = new ModelAndView("showMemoCards");
         PageRequest pageable = PageRequest.of(page - 1, 8);
         Page<MemoCard> memoCardPage = memoCardService.getAllMemoCardsPaged(pageable);
-        System.out.println(memoCardPage.get().count());
+        return getModelAndView(modelAndView, memoCardPage);
+    }
+
+    @GetMapping("/memocards/{category}/page/{page}")
+    public ModelAndView getAllForCategory(@PathVariable int page, @PathVariable String category) {
+        ModelAndView modelAndView = new ModelAndView("showMemoCards");
+        PageRequest pageable = PageRequest.of(page - 1, 8);
+        Page<MemoCard> memoCardPage = memoCardService.getAllForCategory(category, pageable);
+        return getModelAndView(modelAndView, memoCardPage);
+    }
+
+    private ModelAndView getModelAndView(ModelAndView modelAndView, Page<MemoCard> memoCardPage) {
         int totalPages = memoCardPage.getTotalPages();
         if(totalPages > 0) {
             List<Integer> pageNumbers = IntStream.rangeClosed(1,totalPages).boxed().collect(Collectors.toList());
@@ -33,7 +44,6 @@ public class MemoCardController {
         }
         modelAndView.addObject("activeMemoCardList", true);
         modelAndView.addObject("memocards", memoCardPage.getContent());
-        System.out.println("Am i here");
         return modelAndView;
     }
 }

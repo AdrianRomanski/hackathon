@@ -21,6 +21,11 @@ public class MemoCardServiceImpl implements MemoCardService {
     }
 
     @Override
+    public Page<MemoCard> getAllForCategory(String name, Pageable pageable) {
+        return memoCardPageRepository.findByCategory_Name(name, pageable);
+    }
+
+    @Override
     public MemoCard getMemoCardById(Long id) {
         return memoCardRepository.findById(id).
                 orElseThrow(RuntimeException::new);
