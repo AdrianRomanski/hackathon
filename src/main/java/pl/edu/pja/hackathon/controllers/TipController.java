@@ -7,9 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
-import pl.edu.pja.hackathon.model.Category;
 import pl.edu.pja.hackathon.model.tip.Tip;
-import pl.edu.pja.hackathon.services.CategoryService;
 import pl.edu.pja.hackathon.services.TipService;
 
 import java.util.List;

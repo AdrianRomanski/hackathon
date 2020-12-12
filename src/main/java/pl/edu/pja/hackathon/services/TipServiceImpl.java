@@ -4,10 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import pl.edu.pja.hackathon.model.memocard.MemoCard;
 import pl.edu.pja.hackathon.model.tip.Tip;
-import pl.edu.pja.hackathon.repositories.MemoCardPageRepository;
-import pl.edu.pja.hackathon.repositories.MemoCardRepository;
 import pl.edu.pja.hackathon.repositories.TipPageRepository;
 import pl.edu.pja.hackathon.repositories.TipRepository;
 
@@ -25,7 +22,7 @@ public class TipServiceImpl implements TipService {
     }
 
     @Override
-    public Tip getCategoryById(Long id) {
+    public Tip getTipById(Long id) {
         return tipRepository.findById(id).
                 orElseThrow(RuntimeException::new);
     }
