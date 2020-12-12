@@ -11,11 +11,7 @@
 </head>
 <body>
 
-<div class="row">
-    <div class="col-md-12">
-        <h1 class="section-header"> Categories</h1>
-    </div>
-</div>
+
 
 <!--navigation-->
 <nav class="navbar navbar-expand-md navbar-dark nav-menu fixed-top">
@@ -33,10 +29,10 @@
                 <a class="nav-link" th:href="@{/home}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" th:href="@{/categories/page/1}">Categories<span class="sr-only">(current)</span></a>
+                <a class="nav-link" th:href="@{/categories/page/1}">Categories<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/memocards/showAll/page/1}">MemoCards</a>
+                <a class="nav-link active" th:href="@{/memocards/showAll/page/1}">MemoCards</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"></a>
@@ -49,38 +45,67 @@
 </nav>
 <!--end of navigation-->
 
-<div class="container col-md-10 col-md-offset-1 movies-section" style="margin-top: 100px">
 
-    <div class="row">
-        <div class="row">
-                <div class="col-md-4 p-4" th:each="category: ${categories}">
+<div class="container-fluid col-md-12 mx-4" style="margin-top: 250px">
+
+    <div class="row" style="margin-bottom: 125px">
+        <div class="col-md-3">
+            <div class="listing listing-single">
+                <div class="row">
                     <div class="listing">
                         <div class="row">
-                            <a th:href="@{'/memocards/' + ${category.name} +'/page/1'}">
+                            <a th:href="@{'/memocards/' + ${card.category.name} +'/page/1'}">
                                 <div class="col-lg-12">
                                     <div class="box-image-container">
                                         <img role="presentation"
-                                             th:src="@{'/category/' + ${category.id} + '/categoryImage'}"
+                                             th:src="@{'/category/' + ${card.category.id} + '/categoryImage'}"
                                              class="box-image">
                                     </div>
-                                    <div class="listing-title" th:text="${category.name}"></div>
+                                    <div class="listing-title category-info" th:text="${card.category.name.toUpperCase()}"></div>
                                 </div>
                             </a>
                         </div>
-                        <div class="listing-extra col-md-4">
-                            <div class="small price">
-                                Total
-                            </div>
-                            <div class="listing-extra col-md-4">
-                                <div class="small price" th:text="${category.memoCardList.size()}"></div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="listing listing-single-info">
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <tr>
+                            <td class="category-name">Difficulty</td>
+                            <td class="category-name">Total Solves</td>
+                            <td class="category-name">Category</td>
+                            <td class="category-name">Points</td>
+                        </tr>
+                        <tr>
+                            <td class="category-info">Easy</td>
+                            <td class="category-info">150</td>
+                            <td class="category-info" th:text="${card.category.name}"></td>
+                            <td class="category-info">5</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel-primary">
+                    <div class="single-info-description card-name" style="padding-top: 50px"
+                         th:text="${card.name.toUpperCase()}">
+                    </div>
+                    <div class="col-12 d-flex flex-column" th:each="answer: ${answers}">
+                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button" th:text="${answer}">Black</a>
+<!--                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button">Blue</a>-->
+<!--                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button">Violet</a>-->
+<!--                        <a class="btn btn-outline-primary btn-lg  mb-1" href="#" role="button">Pink</a>-->
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
-</div>
+
+
+
 
 
 <div class="row" th:fragment="pagination">
@@ -95,6 +120,7 @@
         </nav>
     </div>
     <div class="col-md-2"></div>
+</div>
 </div>
 
 

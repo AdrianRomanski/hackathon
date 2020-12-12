@@ -24,7 +24,7 @@ public class CategoryController {
     @GetMapping("/categories/page/{page}")
     public ModelAndView getAllCategoriesPaged(@PathVariable int page) {
         ModelAndView modelAndView = new ModelAndView("showCategories");
-        PageRequest pageable = PageRequest.of(page - 1, 8);
+        PageRequest pageable = PageRequest.of(page - 1, 6);
         Page<Category> categoryPage = categoryService.getAllCategoriesPaged(pageable);
         System.out.println(categoryPage.get().count());
         int totalPages = categoryPage.getTotalPages();

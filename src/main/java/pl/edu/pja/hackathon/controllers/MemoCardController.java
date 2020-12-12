@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
@@ -34,6 +35,13 @@ public class MemoCardController {
         PageRequest pageable = PageRequest.of(page - 1, 8);
         Page<MemoCard> memoCardPage = memoCardService.getAllForCategory(category, pageable);
         return getModelAndView(modelAndView, memoCardPage);
+    }
+
+    @GetMapping("memocards/{id}")
+    public String getByID(@PathVariable String id, Model model){
+        model.addAttribute("card", memoCardService.getMemoCardById(Long.valueOf(id)));
+        model.addAttribute("answers", memoCardService.getRandomAnswers(Long.valueOf(id)));
+        return "showSingleMemoCard";
     }
 
     private ModelAndView getModelAndView(ModelAndView modelAndView, Page<MemoCard> memoCardPage) {
