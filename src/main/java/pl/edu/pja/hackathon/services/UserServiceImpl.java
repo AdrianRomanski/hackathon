@@ -17,4 +17,9 @@ public class UserServiceImpl implements UserService {
     public List<User> getTop20Users() {
         return userRepository.findAll();
     }
+
+    @Override
+    public User getUserByID(Long id) {
+        return userRepository.findById(id).get();
+    }
 }

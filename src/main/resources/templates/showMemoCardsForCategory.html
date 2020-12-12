@@ -59,7 +59,7 @@
                             <div class="col-lg-12">
                                 <div class="box-image-container">
                                     <img role="presentation"
-                                         th:src="@{'/category/' + ${memoCard.id} + '/categoryImage'}"
+                                         th:src="@{'/category/' + ${memoCard.category.id} + '/categoryImage'}"
                                          class="box-image">
                                 </div>
                                 <div class="listing-title" th:text="${memoCard.name}"></div>
@@ -79,7 +79,7 @@
         <nav aria-label="Pagination">
             <ul class="pagination justify-content-center">
                 <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
-                    <a class="page-link" th:href="@{|/memocards/showAll/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
+                    <a class="page-link" th:href="@{|/memocards/${category}/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
                 </li>
             </ul>
         </nav>

@@ -49,4 +49,12 @@ public class MemoCardServiceImpl implements MemoCardService {
         collect.add(memoCard.getDefinition());
         return collect;
     }
+
+    @Override
+    public boolean checkAnswer(String answer, Long id) {
+        return memoCardPageRepository.findById(id)
+                .orElseThrow(RuntimeException::new)
+                .getDefinition()
+                .equals(answer);
+    }
 }
