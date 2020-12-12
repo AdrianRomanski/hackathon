@@ -1,0 +1,229 @@
+body {
+    font-family: 'Monsterrat', sans-serif;
+}
+
+
+/*header*/
+.header-home {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .5)), url("pictures/home.webp") no-repeat center center
+    /cover;
+}
+/*end of header*/
+
+/*navigation*/
+.nav-menu {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+    padding: 20px;
+    transition: all .7s;
+}
+
+
+ul a:hover{
+    /*color: #FBC02D !important;*/
+    color: yellowgreen !important;
+}
+nav li{
+    text-align: center;
+    text-transform: uppercase;
+}
+li > a:after{
+    content: '';
+    display: block;
+    height: 1.5px;
+    /*background: #FBC02D;*/
+    background: yellowgreen;
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+li > a:hover:after{
+    transform: scaleX(1);
+    transition: transform .3s;
+}
+.active{
+    /*color: #FBC02D !important;*/
+    color: yellowgreen !important;
+}
+
+/*navbar button*/
+.line1, .line2, .line3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.change .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+/*end of navbar button*/
+.custom-navbar {
+    padding: 5px 30px;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7));
+}
+/*end of navbar*/
+
+/*banner*/
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.banner-heading {
+    animation-name: anim;
+    animation-duration: 2s;
+}
+
+.banner-span {
+    font-size: 40px;
+}
+
+.banner-par {
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/*underline banner animation*/
+.underline_anim {
+    color: #dfe5f3;
+    text-decoration: none;
+    background-image: linear-gradient(lightgrey, lightgrey),
+    linear-gradient(lightgrey, lightgrey, lightgrey, lightgrey),
+    linear-gradient(yellowgreen, yellowgreen);
+    background-size: 20px 2px, 100% 2px, 0 2px;
+    background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 2s linear, background-position 2s linear;
+}
+
+.underline_anim:hover {
+    background-size: 20px 2px, 0 2px, 100% 2px;
+    background-position: calc(50% + 20px) 100%, 100% 100%, 0 100%;
+}
+/*end of underline banner animation*/
+/*end of banner*/
+
+/*end of header*/
+
+/*mission*/
+
+.mission {
+    background: whitesmoke;
+}
+
+.underline {
+    width: 250px;
+    border: 2px solid lightslategray;
+    margin: auto;
+}
+
+.mission-name {
+    color: lightslategray;
+}
+
+.icon-color {
+    color: yellowgreen;
+}
+
+.mission-text {
+    color: lightslategray;
+}
+/*end of mission*/
+
+/*subscribe*/
+
+.subscribe {
+    background: linear-gradient(105deg,
+    rgba(21,31, 31, .6) 0%,
+    rgba(21, 31, 32, .8) 50%,
+    transparent 50%),
+    url("pictures/kiwi_oil.jpg") no-repeat center center /cover;
+}
+
+.input {
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #eee;
+    border-radius: 0;
+    transition: all .8s;
+}
+
+.input:focus {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: #fff;
+    border-bottom: 2px solid #8ee53f;
+}
+
+.submit-button {
+    /*#0d8e01 #30ef1f*/
+    margin-top: 60px;
+    background-color: #32bc49;
+    color: #eee;
+    transition: all .3s;
+}
+
+.submit-button:hover {
+    background: #87E878;
+    color: #eee;
+    transform: translateY(-3px);
+}
+
+.label {
+    color: whitesmoke;
+    display: block;
+    margin-top: -70px;
+    margin-left: 4px;
+    font-size: 13px;
+    transition: all .3s;
+}
+
+.input:placeholder-shown + .label {
+    transform: translate(20px, 20px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*end of subscribe*/
+
+/*footer*/
+
+.footer-link {
+    color: #eee;
+    font-size: 13px;
+    transition: all .5s;
+}
+
+.footer-link:hover {
+    text-decoration: none;
+}
+
+/*end of footer*/
+
+

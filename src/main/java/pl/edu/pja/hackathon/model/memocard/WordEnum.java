@@ -1,10 +1,8 @@
 package pl.edu.pja.hackathon.model.memocard;
 
 import lombok.AllArgsConstructor;
-import org.jetbrains.annotations.NotNull;
 
 @AllArgsConstructor
-@NotNull
 public enum WordEnum {
 
 	//TODO add more
