@@ -1,6 +1,7 @@
 package pl.edu.pja.hackathon.model.memocard;
 
 import lombok.*;
+import org.jetbrains.annotations.NotNull;
 import pl.edu.pja.hackathon.model.BaseEntity;
 import pl.edu.pja.hackathon.model.tip.Tip;
 
