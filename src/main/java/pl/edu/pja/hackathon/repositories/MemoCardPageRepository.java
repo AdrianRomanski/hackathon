@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import pl.edu.pja.hackathon.model.memocard.MemoCard;
 
 @Repository
-public interface MemoCardPageRepository extends CrudRepository {
+public interface MemoCardPageRepository extends CrudRepository<MemoCard, Long> {
 
     Page<MemoCard> findAll(Pageable pageable);
 
