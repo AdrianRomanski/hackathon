@@ -16,7 +16,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 
 @Component
@@ -49,14 +48,8 @@ public class ApplicationBootstrap implements ApplicationListener<ContextRefreshe
         MemoCard red = MemoCard.builder().name("red").definition("czerwony").category(colors).build();
         MemoCard blue = MemoCard.builder().name("blue").definition("niebieski").category(colors).build();
         MemoCard grey = MemoCard.builder().name("grey").definition("szary").category(colors).build();
-        MemoCard pink = MemoCard.builder().name("pink").definition("różowy").category(colors).build();
-        MemoCard brown = MemoCard.builder().name("brown").definition("brązowy").category(colors).build();
 
-        List<MemoCard> colorMemoCards = Arrays.asList(black, white, orange, red, blue, grey, pink, brown);
-
-        memoCardRepository.saveAll(colorMemoCards);
-        colors.setMemoCardList(colorMemoCards);
-        categoryRepository.save(colors);
+        memoCardRepository.saveAll(Arrays.asList(black, white, orange, red, blue, grey));
     }
 
     private Byte[] getBytes(String path) throws IOException {

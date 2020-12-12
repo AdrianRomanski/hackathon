@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf - Bootstrap WebJars</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="../static/css/custom.css" rel="stylesheet" th:href="@{/css/custom.css}"/>
+    <link href="../static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="section-header"> Categories</h1>
+    </div>
+</div>
+
+<!--navigation-->
+<nav class="navbar navbar-expand-md navbar-dark nav-menu fixed-top">
+    <a class="navbar-brand" href="#">
+        <img th:src="@{/pictures/logo.png}" height="50" alt="mdb logo">
+    </a>
+    <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="bg-light line1"></div>
+        <div class="bg-light line2"></div>
+        <div class="bg-light line3"></div>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/home}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" th:href="@{/categories/page/1}">Categories<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/creator}">Rankings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--end of navigation-->
+<div class="container col-md-10 col-md-offset-1 movies-section" style="margin-top: 100px">
+
+    <div class="row">
+        <div class="row">
+            <div class="col-md-4 p-4" th:each="user: ${users}">
+                <div class="listing">
+                    <div class="row">
+                        <a th:href="@{'/categories/' + ${user.firstName} +'/page/1'}">
+                            <div class="col-lg-12">
+                                <div class="box-image-container">
+                                    <img role="presentation"
+                                         th:src="@{'/category/' + ${user.id} + '/categoryImage'}"
+                                         class="box-image">
+                                </div>
+                                <div class="listing-title" th:text="${user.firstName}"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listing-extra col-md-4">
+                        <div class="small price">
+                            Total
+                        </div>
+                        <div class="listing-extra col-md-4">
+                            <div class="small price">15</div>
+                            <!--                   // th:text="${category.moviesDTO.size()}"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/custom.js}"></script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /*font-size: 12px;*/
     line-height: 1.42857;
-    min-height: 1800px;
+    /*min-height: 1800px;*/
     max-height: max-content;
 }
 
@@ -59,8 +59,8 @@ img {
 .listing .listing-extra {
     display: flex;
     margin-top: auto;
-    color: #4169E1 !important;
-    font-size: 15px;
+    color: dimgrey !important;
+    font-size: 22px;
     font-weight: bold;
     line-height: 15px;
     justify-content: space-around;
@@ -92,7 +92,7 @@ img {
 }
 
 .listing .listing-title {
-    color: #4169E1;
+    color: slategrey;
     font-size: 18px;
     font-weight: bold;
     line-height: 25px;
@@ -120,6 +120,27 @@ img {
     min-height: 165px;
     overflow: hidden;
 }
+
+/**/
+
+.category-name {
+    color: #4169E1;
+    font-size: 22px;
+    font-family: "Comic Sans MS", serif;
+}
+
+.category-info {
+    color: slategrey;
+    font-size: 18px;
+    font-family: "Comic Sans MS", serif;
+}
+
+.card-name {
+    font-family: "Comic Sans MS", serif;
+    font-size: 80px;
+}
+
+/**/
 
 
 

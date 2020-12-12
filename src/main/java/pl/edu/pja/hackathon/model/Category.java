@@ -7,7 +7,7 @@ import pl.edu.pja.hackathon.model.memocard.MemoCard;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -19,7 +19,7 @@ public class Category extends BaseEntity{
 
     private String name;
     @OneToMany
-    private List<MemoCard> memoCardList;
+    private Set<MemoCard> memoCardSet;
 
     @Lob
     private Byte[] image;
